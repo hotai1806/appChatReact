@@ -1,0 +1,26 @@
+.messageContainer{
+    display: inline;
+    
+
+}
+.justifyStart{
+    justify-content: flex-start;
+    opacity: 0.2;
+    color:red;
+}
+.yourUser{
+    display: inline;
+    float: right;
+    color: black;
+}
+.otherUser{
+    display: inline;
+    float: left;
+    color: black;
+}
+
+.justifyEnd{
+    justify-content: flex-end;
+    color: blue;
+    opacity: 0.2;
+}
