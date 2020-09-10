@@ -12,16 +12,22 @@ export const Message = ({message:{user ,text} ,name}) =>{
     }
 
     return (
-        isCurrentUser?(
-            <div className="messageContainer justifyStart">
-                <p className='yourUser'> {user}</p>
-                <div>{text} </div>
-            </div>
-        ):(
+        isCurrentUser
+          ? (
             <div className="messageContainer justifyEnd">
-                <p className='otherUser'> {user}</p>
-                <div>{text} </div>
+              <p className="sentText pr-10">{currenUser}</p>
+              <div className="messageBox backgroundBlue">
+                <p className="messageText colorWhite">{text} </p>
+              </div>
             </div>
-        )
-    )
+            )
+            : (
+              <div className="messageContainer justifyStart">
+                <div className="messageBox backgroundLight">
+                  <p className="messageText colorDark">{text} </p>
+                </div>
+                <p className="sentText pl-10 ">{user}</p>
+              </div>
+            )
+      );
 }
